@@ -1,0 +1,23 @@
+ body: Center(
+        child: Text("Main", style: TextStyle(
+          fontSize: 20,
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+          backgroundColor: Colors.blue,
+          decoration:  TextDecoration.combine([
+            TextDecoration.underline,
+            TextDecoration.overline
+          ]),
+          decorationThickness: 3.0,
+          decorationColor: Colors.red,
+          decorationStyle: TextDecorationStyle.dashed,
+          letterSpacing: 2.0,
+          wordSpacing: 45.0,
+          fontFamily: "jmeel"
+
+
+
+        ),
+        textAlign: TextAlign.center,
+        maxLines: 2,
+        ),
