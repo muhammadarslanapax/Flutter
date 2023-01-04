@@ -1,0 +1,113 @@
+
+ child: Container(
+         width: 300,
+         child: TextField(
+           decoration: InputDecoration(
+             border: OutlineInputBorder(
+               
+             )
+           ),
+         ),
+       ),
+       
+       
+       
+       
+             child: Container(
+         width: 300,
+         child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+             TextField(
+               decoration: InputDecoration(
+                 focusedBorder: OutlineInputBorder(
+                     borderRadius: BorderRadius.circular(10),
+                     borderSide: BorderSide(
+                         color: Colors.green,
+                       width: 3,
+                       
+                     )
+
+                 ),
+
+
+                 border: OutlineInputBorder(
+
+                   borderRadius: BorderRadius.circular(10),
+                   borderSide: BorderSide(
+                     color: Colors.black
+                   )
+
+                 )
+               ),
+             ),
+             Container(height: 22),
+             
+             
+             
+             
+             
+             var email = TextEditingController();
+             
+             
+                body:Center(
+
+
+       child: Container(
+         width: 300,
+         child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+             TextField(
+               controller: email,
+               decoration: InputDecoration(
+                 suffixText: "enter your name",
+                suffixIcon:  IconButton(
+                  icon: Icon(Icons.verified_user), onPressed: () {
+                    print("object");
+                },
+                ),
+                 prefixIcon: IconButton(
+                   icon: Icon(Icons.ac_unit,color: Colors.green,), onPressed: () {
+                     print("object");
+                 },
+                 ),
+
+
+                 focusedBorder: OutlineInputBorder(
+                     borderRadius: BorderRadius.circular(10),
+                     borderSide: BorderSide(
+                         color: Colors.green,
+                       width: 3,
+
+                     )
+
+                 ),
+
+
+                 border: OutlineInputBorder(
+
+                   borderRadius: BorderRadius.circular(10),
+                   borderSide: BorderSide(
+                     color: Colors.black
+                   )
+
+                 )
+               ),
+             ),
+             Container(height: 22),
+             
+             
+             
+             
+             
+             
+              TextButton(
+               child: Text("HI")
+               ,
+               onPressed: (){
+                 String vv =email.text.toString();
+                 print(vv);
+
+               },
+             )
