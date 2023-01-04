@@ -1,0 +1,88 @@
+//main.dart
+
+import 'package:first/splash.dart';
+import 'package:flutter/material.dart';
+void main(){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Flutter App",
+      theme: ThemeData(
+        primarySwatch: Colors.brown
+      ),
+      home: SplashScreen(),
+      // debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class DashBoard extends StatelessWidget {
+  const DashBoard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("DashBoard"),
+
+      ),
+      body: Container(
+        child: Center(
+          child: Column(
+            children: [
+              Text("DashBoard")
+            ],
+
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+//splash.dart
+import 'dart:async';
+
+import 'package:first/main.dart';
+import 'package:flutter/material.dart';
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+
+    super.initState();
+    Timer(Duration(seconds: 3),(){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
+          DashBoard()
+
+      ));
+
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+      body: Container(
+        color: Colors.blue,
+        child: Center(
+          child: Text("WelCome",style: TextStyle(fontSize: 20,color: Colors.white),),
+        ),
+      ),
+
+
+    );
+  }
+}
